@@ -1,0 +1,21 @@
+/*CREATE TABLE Users (
+ 
+UserId SERIAL PRIMARY KEY,
+ 
+Username TEXT,
+ 
+UPassword TEXT
+);
+
+
+
+INSERT INTO Users ( Username, UPassword) VALUES ('Stuarticus', 'Harperian');
+
+INSERT INTO Users ( Username, UPassword) VALUES ('Sumehra', 'Harperian');
+
+INSERT INTO Users ( Username, UPassword) VALUES ('Greggorio', 'GGG');*/
+
+#	userid	username	upassword
+1	1	Stuarticus	Harperian
+2	2	Sumehra	Harperian
+3	3	Greggorio	GGG

@@ -1,0 +1,57 @@
+/*CREATE TABLE Properties (
+
+PropertyId SERIAL PRIMARY KEY,
+
+UserId INTEGER REFERENCES Users(UserId),
+
+Name TEXT,
+
+Description TEXT,
+
+Address TEXT,
+
+City Text,
+
+State VARCHAR(2),
+
+Zip VARCHAR(10),
+
+ImgURL Text,
+
+LoanAmmount DECIMAL(9,2),
+
+MortgagePayment DECIMAL(7,2),
+
+Rent FLOAT
+);
+
+
+
+Insert Into Properties ( UserId, Name, Description, Address, City, State, Zip, ImgURL, LoanAmmount, MortgagePayment, Rent )
+
+Values( 1, 'Harper Home', 'Where I grew up', '439740 ksdbjflabdfbk', 'fdgasd', 'NM', '54245', 'https://cdn.pixabay.com/photo/2018/01/31/16/56/travel-3121498_960_720.jpg', 270000, 1500, 1875 ),
+
+( 1, 'Sparks II', 'Where I met Summer', '3842 jgherhgfi', 'tryew', 'UT', '23523', 'https://cdn.pixabay.com/photo/2017/10/07/10/23/beautiful-home-2826052_960_720.jpg', 1500000, 25000, 31250 ),
+
+( 2, 'Halter Circle', 'I do not like this place', '3403 fhkrdjfkhkg', 'bvjk', 'UT', '98756', 'https://cdn.pixabay.com/photo/2017/05/19/05/08/house-2325539_960_720.jpg', 150000, 950, 1187.5 ),
+
+( 2, 'Liberty Circle', 'I love this place', '3984 efhgiwerh', 'rwet', 'UT', '46788', 'https://cdn.pixabay.com/photo/2018/01/08/18/29/house-3069959_960_720.jpg', 200000, 1200, 1500 ),
+
+( 3, '390 House', 'I love this place', '90302 jkdshkfhgg', 'vbnxx', 'UT', '35678', 'https://cdn.pixabay.com/photo/2016/08/16/03/50/exterior-1597098_960_720.jpg', 350000, 2300, 2875 ),
+
+( 3, 'Pectol House', 'I hate this place', '09384 skjdhfkhkhhjk', 'tduijugj', 'UT', '23456', 'https://cdn.pixabay.com/photo/2017/03/03/11/11/house-2113824_960_720.jpg',	200000, 1200, 1500 );*/
+
+
+
+Select * From Properties;
+
+
+#	propertyid	userid	name		description			address			city		state	zip	imgurl											loanammount	mortgagepayment		rent
+1	1		1	Harper Home	Where I grew up			439740 ksdbjflabdfbk	fdgasd		NM	54245	https://cdn.pixabay.com/photo/2018/01/31/16/56/travel-3121498_960_720.jpg		270000.00	1500.00			1875
+2	2		1	Sparks II	Where I met Summer		3842 jgherhgfi		tryew		UT	23523	https://cdn.pixabay.com/photo/2017/10/07/10/23/beautiful-home-2826052_960_720.jpg	1500000.00	25000.00		31250
+3	3		2	Halter Circle	I do not like this place	3403 fhkrdjfkhkg	bvjk		UT	98756	https://cdn.pixabay.com/photo/2017/05/19/05/08/house-2325539_960_720.jpg		150000.00	950.00			1187.5
+4	4		2	Liberty Circle	I love this place		3984 efhgiwerh		rwet		UT	46788	https://cdn.pixabay.com/photo/2018/01/08/18/29/house-3069959_960_720.jpg		200000.00	1200.00			1500
+5	5		3	390 House	I love this place		90302 jkdshkfhgg	vbnxx		UT	35678	https://cdn.pixabay.com/photo/2016/08/16/03/50/exterior-1597098_960_720.jpg		350000.00	2300.00			2875
+6	6		3	Pectol House	I hate this place		09384 skjdhfkhkhhjk	tduijugj	UT	23456	https://cdn.pixabay.com/photo/2017/03/03/11/11/house-2113824_960_720.jpg		200000.00	1200.00			1500
+
+
