@@ -6,9 +6,9 @@ module.exports={
 
     db.login([ username ])
       .then( userRes => {
-        if ( userRes[0].UPassword == password ){
-          session.user.id = userRes[0].UserId;
-          session.user.username = userRes[0].Username;
+        if ( userRes[0].upassword == password ){
+          session.user.id = userRes[0].userid;
+          session.user.username = userRes[0].username;
           res.status(200).send( session.user );
         }
         else {
@@ -25,8 +25,8 @@ module.exports={
 
     db.register([ username, password ])
       .then(userRes => {
-        session.user.id = userRes[0].UserId;
-        session.user.username = userRes[0].Username;
+        session.user.id = userRes[0].userid;
+        session.user.username = userRes[0].username;
         res.status(200).send( session.user );
       })
       .catch(() => res.status( 500 ).send());
