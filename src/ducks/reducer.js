@@ -28,6 +28,7 @@ const UPDATE_PROP_LIST_FULFILLED = 'UPDATE_PROP_LIST_FULFILLED';
 const UPDATE_USER = 'UPDATE_USER';
 const UPDATE_USER_PENDING = 'UPDATE_USER_PENDING';
 const UPDATE_USER_FULFILLED = 'UPDATE_USER_FULFILLED';
+const CANCEL = 'CANCEL'
 
 //Reducer function
 function reducer( state = initialState, action ){
@@ -58,6 +59,9 @@ function reducer( state = initialState, action ){
 
     case UPDATE_RENT:
       return Object.assign({}, state, {rent: action.payload});
+
+    case CANCEL:
+      return Object.assign({}, state, initialState);
 
     default:
       return state;
@@ -111,6 +115,12 @@ export function updateRent( rent ){
   return {
     type: UPDATE_RENT,
     payload: rent
+  }
+}
+
+export function cancel(){
+  return {
+    type: CANCEL
   }
 }
 

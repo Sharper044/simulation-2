@@ -5,7 +5,7 @@ import { updatePropsList } from '../../../ducks/reducer';
 function Property(props) {
   return(
     <div className='Property'>
-      <img src='' alt={} className='propImg'/>
+      <img src={props.property.imgurl} alt={props.property.name} className='propImg'/>
       <div className='nameDesc'>
         <h6>{props.property.name}</h6>
         <p>{props.property.description}</p>

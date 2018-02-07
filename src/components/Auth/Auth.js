@@ -46,11 +46,11 @@ class Auth extends Component {
     <div className='Auth'>
       <div className='AuthLayout Center'>
         <img src='../../../assets/auth_logo.png' alt='Houser Company Logo' className='AuthLogo' />
-        <div>
+        <div className='inputHolder'>
           <label for='username'>Username</label>
-          <input type='text' id='username' className='homeInput' onChange={ e => this.handleChange( e )}/>
+          <input type='text' id='username' className='homeInput' name='unField' onChange={ e => this.handleChange( e )}/>
           <label for='password'>Password</label>
-          <input type='password' id='password' className='homeInput' onChange={ e => this.handleChange( e )}/>
+          <input type='password' id='password' className='homeInput' name='pwField' onChange={ e => this.handleChange( e )}/>
         </div>
         <div>
           <button className='button midgreen' id='login' onClick={() => this.login()}>Login</button>
