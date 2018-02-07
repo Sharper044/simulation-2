@@ -44,7 +44,7 @@ class Auth extends Component {
 
   render() {
     <div className='Auth'>
-      <div className='AuthCenter'>
+      <div className='AuthLayout Center'>
         <img src='../../../assets/auth_logo.png' alt='Houser Company Logo' className='AuthLogo' />
         <div>
           <label for='username'>Username</label>
