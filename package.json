@@ -1,14 +1,9 @@
 {
-  "name": "simulation-2",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "name": "houser",
+  "version": "0.1.0",
+  "private": true,
+  "main": "server/index.js",
+  "proxy": "http://localhost:3030",
   "dependencies": {
     "axios": "^0.17.1",
     "body-parser": "^1.18.2",
@@ -25,5 +20,14 @@
     "react-scripts": "^1.1.0",
     "redux": "^3.7.2",
     "redux-promise-middleware": "^5.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "redux-devtools-extension": "^2.13.2"
   }
 }

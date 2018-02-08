@@ -29,14 +29,14 @@ class Dashboard extends Component{
   }
 
   render(){
-    let propertyList = (this.props.propList)?(this.props.propList.map( x => <Property property={ x } />)):('Loading...')
+    let propertyList = (this.props.propList)?(this.props.propList.map( ( x, i ) => <Property property={ x } key={ i } />)):('Loading...')
     return(
       <div className='Dashboard'>
         <Banner/>
 
         <div className='DashLayout Center'>
 
-          <Link to="/1"><button className='button midgreen'>Add new property</button></Link>
+          <Link to="/1"><button id='b1' className='button midgreen'>Add new property</button></Link>
 
           <div className='filterBox'>
             <label>List properties with "desired rent" greater than: $<input placeholder='0' type='text' value={this.state.workingRent} onChange={ event => this.handleChange( event )} className='rentInput'/></label>
@@ -62,7 +62,7 @@ class Dashboard extends Component{
 
 function mapStateToProps( state ){
   return {
-    propList: state.propList
+    propList: state.reducer1.propList
   }
 }
 

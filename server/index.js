@@ -30,9 +30,9 @@ app.post( '/api/auth/register', userController.register ); //Registers a user to
 app.post( '/api/auth/logout', userController.logout ); //Destroys the session. Sends a status of 200.
 
 //Property API commands:
-app.post( '/api/properties', authorizationCheck, propController.createNew); //Creates a new property. Returns all the properties associated with the logged in user.
+app.post( '/api/properties', authorizationCheck, propController.createNew ); //Creates a new property. Returns all the properties associated with the logged in user.
 app.get( '/api/properties', authorizationCheck, propController.getProps ); //Returns all properties associated with the logged in user. Accepts an optional query that filters all properties associated with the logged in user by "desired rent". Returns all the filtered properties.
-app.delete( '/api/properties/:id', authorizationCheck,propController.deleteProp ); //Deletes a property. Returns all the properties associated with the logged in user.
+app.delete( '/api/properties/:id', authorizationCheck, propController.deleteProp ); //Deletes a property. Returns all the properties associated with the logged in user.
 
 //Set server to listen for incoming changes.
 const port = process.env.CONNECTION_PORT || 3000;

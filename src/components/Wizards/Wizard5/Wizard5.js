@@ -32,21 +32,21 @@ class Wizard5 extends Component {
             <h2>Add new listing</h2>
             <button className='button red' onClick={() => {
             this.props.cancel();
-            this.props.history.push('http://localhost:3000/#/dash');
+            this.props.history.push('/dash');
           }}>cancel</button>
           </div>
           <p>Step 5</p>
           <div className='progressHolder'>
-            <img src='../../../../assets/step_completed.png' alt='Step 1 completed'/>
-            <img src='../../../../assets/step_completed.png' alt='Step 2 completed'/>
-            <img src='../../../../assets/step_completed.png' alt='Step 3 completed'/>
-            <img src='../../../../assets/step_completed.png' alt='Step 4 completed'/>
-            <img src='../../../../assets/step_active.png' alt='Step 5 active'/>
+            <img src={require('../../../assets/step_completed.png')} alt='Step 1 completed'/>
+            <img src={require('../../../assets/step_completed.png')} alt='Step 2 completed'/>
+            <img src={require('../../../assets/step_completed.png')} alt='Step 3 completed'/>
+            <img src={require('../../../assets/step_completed.png')} alt='Step 4 completed'/>
+            <img src={require('../../../assets/step_active.png')} alt='Step 5 active'/>
           </div>
           <div className='inputHolder'>
-            <h6>Recommended Rent ${(this.props.rent*1.25)}</h6>
-            <label for='proprent'>Desired Rent</label>
-            <input type='text' id='proprent' name='workingrent' className='rentInput' onChange={ e => this.handleChange( e )}/>
+            <h6>Recommended Rent ${(this.props.mortgagePayment*1.25)}</h6>
+            <label htmlFor='proprent'>Desired Rent</label>
+            <input type='text' id='proprent' name='workingrent' className='rentInput' value={this.state.workingrent} onChange={ e => this.handleChange( e )}/>
           </div>
           <div>
             <Link to='/4'><button className='button dkgreen'>Previous Step</button></Link>
@@ -64,7 +64,7 @@ class Wizard5 extends Component {
                 mortgagePayment: this.props.mortgagePayment,
                 rent: this.props.rent
               })
-              this.props.history.push('http://localhost:3000/#/dash');
+              this.props.history.push('/dash');
             }}>Complete</button>
           </div>
         </div>
@@ -75,16 +75,16 @@ class Wizard5 extends Component {
 
 function mapStateToProps( state ){
   return {
-    name: state.name,
-    description: state.description,
-    address: state.address,
-    city: state.city,
-    state: state.state,
-    zip: state.zip,
-    imgURL: state.imgURL,
-    loanAmmount: state.loanAmmount,
-    mortgagePayment: state.mortgagePayment,
-    rent: state.rent
+    name: state.reducer1.name,
+    description: state.reducer1.description,
+    address: state.reducer1.address,
+    city: state.reducer1.city,
+    state: state.reducer1.state,
+    zip: state.reducer1.zip,
+    imgURL: state.reducer1.imgURL,
+    loanAmmount: state.reducer1.loanAmmount,
+    mortgagePayment: state.reducer1.mortgagePayment,
+    rent: state.reducer1.rent
   }
 }
 

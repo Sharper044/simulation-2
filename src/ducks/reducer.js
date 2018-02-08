@@ -7,7 +7,7 @@ const initialState = {
   city: '',
   state: '',
   zip: '',
-  imgURL: '',
+  imgURL: 'https://static.vecteezy.com/system/resources/previews/000/139/911/non_2x/vector-grey-gradient-abstract-background.jpg',
   loanAmmount: 0,
   mortgagePayment: 0,
   rent: 0,

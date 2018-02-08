@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
+
+.Auth, .Dashboard, .Wizard {
+  background-color: #AFD4C0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.Center {
+  background-color: white;
+  width: 60vw;
+  height: 100vh;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+.AuthLayout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wizLayout {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.AuthLogo {
+  margin: 30px;
+}
+
+.inputHolder {
+  width: 70%;
+  height: 20vh;
+  margin: 10px;
+} 
+
+.homeInput, #propName {
+  width: 100%;
+  height: 30px;
+}
+
+#propDesc {
+  height: 180px;
+  align-content: top;
+}
+
+input, textarea, .largeImg {
+  border: #AFD4C0 solid 2px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+input, h3, textarea {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+label {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  margin: 20px 0 5px 20px;
+}
+
+#AuthButtons {
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+  align-items: flex-start;
+  width: 60%;
+  height: 40px;
+}
+
+.button {
+  height: 40px;
+  border-radius: 5px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  margin-left: 10px;
+}
+
+.midgreen {
+  background-color: #8AEA92;
+  border-color: #8AEA92;
+}
+
+.dkgreen {
+  background-color: #3B5249;
+  border-color: #3B5249;
+  color: white;
+}
+
+.linkText {
+  text-decoration: none;
+  color: white;
+}
+
+#login, #register {
+  width: 150px;
+}
+
+.Banner {
+  background-color: #519872;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+  align-items: center;
+  height: 50px;
+}
+
+.logout {
+  background-color: #519872;
+  border: 0;
+}
+
+.DashLayout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#b1 {
+  margin: 20px;
+}
+
+.filterBox {
+  width: 95%;
+  height: 50px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.dividerLine {
+  width: 90px;
+  height: 5px;
+  border: 1px black;
+}
+
+.propImg {
+  width: 150px;
+}
+
+.Property {
+  height: 100px;
+  width: 750px;
+  background-color: #F6F0F0;
+  margin: 10px;
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+  align-items: flex-start;
+}
+
+.wizName {
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+  align-items: center;
+  margin: 0 auto 10px auto;
+  width: 80%;
+  height: 50px;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  margin: 25px
+}
+
+.red {
+  background-color: #FEC2C2;
+  border-color: #FEC2C2;
+}
+
+.progressHolder {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 25px;
+  width: 60%;
+}
+
+.inputHolder {
+  width: 60%;
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.largeImg {
+  width: 300px;
+  border-radius: 5px;
+  margin: 5px auto;
+}
+
+.wizLayout, .DashLayout {
+  background: linear-gradient(to bottom, #e2f3ea, #ffffff);
+}

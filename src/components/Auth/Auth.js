@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { updateUser } from '../../ducks/reducer';
+import '../../reset.css';
+import './Auth.css';
 
 class Auth extends Component {
   constructor( props ) {
@@ -28,7 +30,7 @@ class Auth extends Component {
 
   register() {
     this.props.updateUser( 'register', {"username":this.state.unField, "password":this.state.pwField})
-    this.setState({unField: '', pwField: ''}, this.props.history.push('http://localhost:3000/#/dash'));
+    this.setState({unField: '', pwField: ''}, this.props.history.push('/dash'));
   }
 
   login() {
@@ -37,33 +39,35 @@ class Auth extends Component {
         this.setState({unField: '', pwField: '', loginFailed: true})
       }
       else {
-        this.setState({unField: '', pwField: '', loginFailed: false}, this.props.history.push('http://localhost:3000/#/dash'));
+        this.setState({unField: '', pwField: '', loginFailed: false}, () => this.props.history.push('/dash'));
       }
     })
   }
 
   render() {
-    <div className='Auth'>
-      <div className='AuthLayout Center'>
-        <img src='../../../assets/auth_logo.png' alt='Houser Company Logo' className='AuthLogo' />
-        <div className='inputHolder'>
-          <label for='username'>Username</label>
-          <input type='text' id='username' className='homeInput' name='unField' onChange={ e => this.handleChange( e )}/>
-          <label for='password'>Password</label>
-          <input type='password' id='password' className='homeInput' name='pwField' onChange={ e => this.handleChange( e )}/>
-        </div>
-        <div>
-          <button className='button midgreen' id='login' onClick={() => this.login()}>Login</button>
-          <button className='button dkgreen' id='register' onClick={() => this.register()}>Register</button>
+    return(
+      <div className='Auth'>
+        <div className='AuthLayout Center'>
+          <img src={require('../../assets/auth_logo.png')} alt='Houser Company Logo' className='AuthLogo' />
+          <div className='inputHolder'>
+            <label htmlFor='username'>Username</label>
+            <input type='text' id='username' className='homeInput' name='unField' onChange={ e => this.handleChange( e )}/>
+            <label htmlFor='password'>Password</label>
+            <input type='password' id='password' className='homeInput' name='pwField' onChange={ e => this.handleChange( e )}/>
+          </div>
+          <div id='AuthButtons'>
+            <button className='button midgreen' id='login' onClick={() => this.login()}>Login</button>
+            <button className='button dkgreen' id='register' onClick={() => this.register()}>Register</button>
+          </div>
         </div>
       </div>
-    </div>
+    )
   }
 }
 
 function mapStateToProps( state ) {
   return {
-    user: state.user
+    user: state.reducer1.user
   }
 }
 

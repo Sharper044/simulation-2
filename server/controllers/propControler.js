@@ -30,9 +30,10 @@ module.exports={
     const db = req.app.get('db');
     let userId = req.session.user.id;
     let { id } = req.params;
+    id = id.slice(1);
 
     db.deleteProp([ id, userId ])
       .then( propList => res.status( 200 ).send( propList ))
-      .catch(() => res.status( 500 ).send())
+      .catch(() => res.status( 500 ).send(console.log))
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { updatePropsList } from '../../../ducks/reducer';
+import { updatePropList } from '../../../ducks/reducer';
 
 function Property(props) {
   return(
@@ -18,9 +18,9 @@ function Property(props) {
         <h6>Address: {props.property.address}</h6>
         <h6>City: {props.property.city}</h6>
       </div>
-      <img src='../../../../assets/delete_icon.png' alt='Delete property' className='deleteImg' onClick={() => this.props.updatePropsList( 'delete', props.property.id )}/>
+      <img src={require('../../../assets/delete_icon.png')} alt='Delete property' className='deleteImg' onClick={() => props.updatePropList( 'delete', props.property.propertyid )}/>
     </div>
   );
 }
 
-export default connect(null, { updatePropsList })(Property);
+export default connect(null, { updatePropList })(Property);

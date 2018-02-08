@@ -32,27 +32,27 @@ class Wizard3 extends Component {
             <h2>Add new listing</h2>
             <button className='button red' onClick={() => {
             this.props.cancel();
-            this.props.history.push('http://localhost:3000/#/dash');
+            this.props.history.push('/dash');
           }}>cancel</button>
           </div>
           <p>Step 3</p>
           <div className='progressHolder'>
-            <img src='../../../../assets/step_completed.png' alt='Step 1 completed'/>
-            <img src='../../../../assets/step_completed.png' alt='Step 2 completed'/>
-            <img src='../../../../assets/step_inactive.png' alt='Step 3 active'/>
-            <img src='../../../../assets/step_inactive.png' alt='Step 4 inactive'/>
-            <img src='../../../../assets/step_inactive.png' alt='Step 5 inactive'/>
+            <img src={require('../../../assets/step_completed.png')} alt='Step 1 completed'/>
+            <img src={require('../../../assets/step_completed.png')} alt='Step 2 completed'/>
+            <img src={require('../../../assets/step_active.png')} alt='Step 3 active'/>
+            <img src={require('../../../assets/step_inactive.png')} alt='Step 4 inactive'/>
+            <img src={require('../../../assets/step_inactive.png')} alt='Step 5 inactive'/>
           </div>
           <div className='inputHolder'>
-            <img src={this.state.workingImgURL} alt='New property image' className='largeImg'/>
-            <label for='propImgURL'>Image URL</label>
-            <input type='text' id='propImgURL' name='workingImgURL' className='imgURLInput' onChange={ e => this.handleChange( e )}/>
+            <img src={this.state.workingImgURL} alt='New property' className='largeImg'/>
+            <label htmlFor='propImgURL'>Image URL</label>
+            <input type='text' id='propImgURL' name='workingImgURL' className='imgURLInput' value={this.state.workingImgURL} onChange={ e => this.handleChange( e )}/>
           </div>
           <div>
             <Link to='/2'><button className='button dkgreen'>Previous Step</button></Link>
             <button className='button dkgreen' onClick={() => {
               this.props.updateImgURL( this.state.workingImgURL );
-              this.props.history.push('http://localhost:3000/#/4');
+              this.props.history.push('/4');
             }}>Next Step</button>
           </div>
         </div>
@@ -63,7 +63,7 @@ class Wizard3 extends Component {
 
 function mapStateToProps( state ){
   return {
-    imgURL: state.imgURL
+    imgURL: state.reducer1.imgURL
   }
 }
 

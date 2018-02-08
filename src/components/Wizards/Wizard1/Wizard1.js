@@ -33,26 +33,26 @@ class Wizard1 extends Component {
             <h2>Add new listing</h2>
             <button className='button red' onClick={() => {
             this.props.cancel();
-            this.props.history.push('http://localhost:3000/#/dash');
+            this.props.history.push('/dash');
           }}>cancel</button>
           </div>
           <p>Step 1</p>
           <div className='progressHolder'>
-            <img src='../../../../assets/step_active.png' alt='Step 1 active'/>
-            <img src='../../../../assets/step_inactive.png' alt='Step 2 inactive'/>
-            <img src='../../../../assets/step_inactive.png' alt='Step 3 inactive'/>
-            <img src='../../../../assets/step_inactive.png' alt='Step 4 inactive'/>
-            <img src='../../../../assets/step_inactive.png' alt='Step 5 inactive'/>
+            <img src={require('../../../assets/step_active.png')} alt='Step 1 active'/>
+            <img src={require('../../../assets/step_inactive.png')} alt='Step 2 inactive'/>
+            <img src={require('../../../assets/step_inactive.png')} alt='Step 3 inactive'/>
+            <img src={require('../../../assets/step_inactive.png')} alt='Step 4 inactive'/>
+            <img src={require('../../../assets/step_inactive.png')} alt='Step 5 inactive'/>
           </div>
           <div className='inputHolder'>
-            <label for='propName'>Property Name</label>
-            <input type='text' id='propName' name='workingName' className='nameInput' onChange={ e => this.handleChange( e )}/>
-            <label for='propDesc'>Property Name</label>
-            <input type='text' id='propDesc' name='workingDescription' className='descInput' onChange={ e => this.handleChange( e )}/>
+            <label htmlFor='propName'>Property Name</label>
+            <input type='text' id='propName' name='workingName' className='nameInput' value={this.state.workingName} onChange={ e => this.handleChange( e )}/>
+            <label htmlFor='propDesc'>Property Description</label>
+            <textarea type='text' id='propDesc' name='workingDescription' className='descInput' value={this.state.workingDescription} onChange={ e => this.handleChange( e )}/>
           </div>
           <button className='button dkgreen' onClick={() => {
             this.props.updateNameDesc( this.state.workingName, this.state.workingDescription );
-            this.props.history.push('http://localhost:3000/#/2');
+            this.props.history.push('/2');
           }}>Next Step</button>
         </div>
       </div>
@@ -62,8 +62,8 @@ class Wizard1 extends Component {
 
 function mapStateToProps( state ){
   return {
-    name: state.name,
-    description: state.description
+    name: state.reducer1.name,
+    description: state.reducer1.description
   }
 }
 

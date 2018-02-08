@@ -7,12 +7,11 @@ class Banner extends Component {
   render(){
     return(
       <header className='Banner'>
-        <img src='../../../assets/header_logo.png' alt='Houser company logo' className='headerLogo'/>
+        <img src={require('../../assets/header_logo.png')} alt='Houser company logo' className='headerLogo'/>
         <h2><b>HOUSER</b> Dashboard</h2>
-        <button onClick={() => {this.props.updateUser('logout')}} className='logoutButton'><Link to='/'>Logout</Link></button>
+        <button onClick={() => {this.props.updateUser('logout')}} className='logout button'><Link to='/' className='linkText'>Logout</Link></button>
       </header>
     )
   }
-
 }
 export default connect(null, { updateUser })(Banner);
