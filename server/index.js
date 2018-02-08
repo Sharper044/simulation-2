@@ -14,12 +14,14 @@ const authorizationCheck = require('./middleware/authorizationCheck');
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
+app.use(express.static(`${__dirname}/../build`));
 app.use(session({
  secret: process.env.SESSION_SECRET,
  resave: false,
  saveUninitialized: true
 }));
 app.use(( req, res, next ) => checkForSession( req, res, next ));
+
 
 //Connect to database:
 massive( process.env.CONNECTION_STRING ).then( db => app.set( 'db', db ));
